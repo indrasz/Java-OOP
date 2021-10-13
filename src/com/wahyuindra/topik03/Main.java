@@ -10,13 +10,13 @@ class Mahasiswa{
         this.nim = nim;
         this.nama = nama;
     }
-
     String getNama() {
         return nama;
     }
     String getNim() {
         return nim;
     }
+
 }
 
 class Jurusan{
@@ -35,21 +35,19 @@ class Jurusan{
     String getKode() {
         return kode;
     }
-
     void addMhs(Mahasiswa mahasiswa){
         list.add(mahasiswa);
     }
 
     void show(){
-        System.out.println("Kode " + getKode());
-        System.out.println("Kode " + getNama());
+        System.out.println("Kode : " + getKode());
+        System.out.println("Nama : " + getNama());
         System.out.println("Daftar Mahasiswa : ");
+        int i = 1;
         for(Mahasiswa mhs : list){
-            int i = 0;
-            System.out.println(mhs.getNim() + "-" + mhs.getNama());
+            System.out.println("   " + i++ + ". "+ mhs.getNim() + "-" + mhs.getNama());
         }
     }
-
 }
 
 public class Main {
@@ -77,6 +75,5 @@ public class Main {
         jurusan2.addMhs(mahasiswa6);
         jurusan2.addMhs(mahasiswa7);
         jurusan2.show();
-
     }
 }
