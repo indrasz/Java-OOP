@@ -94,11 +94,7 @@ public class Showroom {
                 System.out.println("Total Harga \t: " + harga);
 
                 double bayar = mobil.getHarga() * jumlahBeli;
-
-                if (jumlahBeli == 1){
-                    diskon = 0.0;
-                    hargaDiskon = mobil.getHarga();
-                }
+                
                 if (jumlahBeli == 2){
                     diskon = 10.0;
                     hargaDiskon = (mobil.getHarga()*jumlahBeli) * 0.1;
@@ -118,53 +114,7 @@ public class Showroom {
             }else {
                 System.out.println("Maaf, Jumlah Stok Tidak Mencukupi\n");
             }
-        }
-//        list.forEach(mobil ->{
-//            if(merk.equalsIgnoreCase(mobil.getMerk())
-//                    && tahun.equalsIgnoreCase(mobil.getTahunKeluaran())
-//                    && jumlahBeli < mobil.getStok()
-//            ){
-//                mobil.setStok(mobil.getStok()-jumlahBeli);
-//                double diskon = 0.0;
-//                double hargaDiskon = 0.0;
-//                DecimalFormat dcm = new DecimalFormat("0.0");
-//
-//                String satuan = dcm.format(mobil.getHarga());
-//                String harga = dcm.format(mobil.getHarga() * jumlahBeli);
-//
-//                System.out.println("Merk \t\t\t: " + mobil.getMerk());
-//                System.out.println("Harga Satuan \t: " + satuan);
-//                System.out.println("Tahun Keluaran \t: " + mobil.getTahunKeluaran());
-//                System.out.println("Jumlah Beli \t: " + jumlahBeli);
-//                System.out.println("Total Harga \t: " + harga);
-//
-//                double bayar = mobil.getHarga() * jumlahBeli;
-//
-//                if (jumlahBeli == 1){
-//                    diskon = 0.0;
-//                    hargaDiskon = mobil.getHarga();
-//                }
-//                if (jumlahBeli == 2){
-//                    diskon = 10.0;
-//                    hargaDiskon = (mobil.getHarga()*jumlahBeli) * 0.1;
-//                    mobil.setHarga(hargaDiskon);
-//                }
-//                if (jumlahBeli > 2){
-//                    diskon = 20.0;
-//                    hargaDiskon = (mobil.getHarga()*jumlahBeli) * 0.2;
-//                    mobil.setHarga(hargaDiskon);
-//                }
-//                String total = dcm.format(hargaDiskon);
-//                String totalBayar = dcm.format(bayar - hargaDiskon);
-//
-//                System.out.println("Diskon \t\t\t: " + diskon + "%");
-//                System.out.println("Total Diskon \t: " + total);
-//                System.out.println("Total Bayar \t: " + totalBayar + "\n");
-//            }else {
-//                System.out.println("Maaf, Jumlah Stok Tidak Mencukupi\n");
-//            }
-//        });
-    }
+        }       
 
     private static void viewStok(){
         list.forEach(Mobil::displayInfo);
